@@ -10,6 +10,9 @@ RUN mkdir -p $INSTALL_PATH
 WORKDIR $INSTALL_PATH
 # Copia o nosso Gemfile para dentro do container
 COPY Gemfile ./
+
+RUN gem install crass -v "1.0.3"
+
 # Instala as Gems
 RUN bundle install
 # Copia nosso código para dentro do container
