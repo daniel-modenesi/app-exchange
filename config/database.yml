@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -83,3 +84,23 @@ production:
   database: ruby-getting-started_production
   username: ruby-getting-started
   password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+=======
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: postgres
+  user: postgres
+
+development:
+  <<: *default
+  database: onebitcode_exchange_development
+
+test:
+  <<: *default
+  database: onebitcode_exchange_test
+
+production:
+  <<: *default
+  database: onebitcode_exchange_production
+>>>>>>> 84962a9ddc68b63bdac750299edc3f70c05ecc23

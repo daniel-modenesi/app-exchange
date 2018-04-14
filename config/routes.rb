@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -56,4 +57,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+=======
+  root 'home#index'
+  post 'exchange', to: 'home#exchange'
+>>>>>>> 84962a9ddc68b63bdac750299edc3f70c05ecc23
 end
