@@ -14,3 +14,9 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
       return false;
+
+$ ->
+    $('#exchange_values').click ->
+      valor = $("#currency").val()
+      $("#currency").val($("#currency_destination").val())
+      $("#currency_destination").val(valor)
